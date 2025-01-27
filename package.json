@@ -83,9 +83,9 @@
   "license": "SEE LICENSE IN LICENSE.txt",
   "overrides": {
     "@achrinza/node-ipc": "^10.1.0",
-    "@hapi/joi": "17.1.1",
-    "@hapi/hoek": "9.2.0",
-    "joi": "17.1.1",
-    "svgo": "^2.8.0"
+    "svgo": "^2.8.0",
+    "uuid": "^7.0.3",
+    "consolidate": "^1.0.1",
+    "superagent": "^9.0.0"
   }
 }
