@@ -55,7 +55,7 @@ export default defineComponent({
 <style lang="scss" scoped>
 .home {
   background-color: #e5faff;
-  background-image: url('/assets/img/home-bg.png');
+  background-image: url('../assets/img/home-bg.png');
   background-size:  cover;
 }
 .home-body {
@@ -73,7 +73,7 @@ export default defineComponent({
   font-weight: var(--weight-heavy);
 }
 .home-nav-item-single {
-  background-image:    url('/assets/img/home-single.svg');
+  background-image:    url('../assets/img/home-single.svg');
   background-repeat:   no-repeat;
   background-position: center 112px;
 
@@ -85,7 +85,7 @@ export default defineComponent({
   }
 }
 .home-nav-item-battery {
-  background-image:    url('/assets/img/home-battery.svg');
+  background-image:    url('../assets/img/home-battery.svg');
   background-repeat:   no-repeat;
   background-position: center 92px;
 
@@ -97,7 +97,7 @@ export default defineComponent({
   }
 }
 .home-nav-item-evchargerdischarger {
-  background-image:    url('/assets/img/home-evchargerdischarger.svg');
+  background-image:    url('../assets/img/home-evchargerdischarger.svg');
   background-repeat:   no-repeat;
   background-position: center 34%;
   background-size: 80%;
@@ -110,7 +110,7 @@ export default defineComponent({
   }
 }
 .home-nav-item-evcharger {
-  background-image:    url('/assets/img/home-evcharger.svg');
+  background-image:    url('../assets/img/home-evcharger.svg');
   background-repeat:   no-repeat;
   background-position: center 34%;
   background-size: 80%;

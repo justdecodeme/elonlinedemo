@@ -92,51 +92,51 @@ export default defineComponent({
   background-color:  rgba(255, 255, 255, 0.2);
 }
 .header-nav-single {
-  background-image:    url('/assets/img/icon-nav-single.svg');
+  background-image:    url('../assets/img/icon-nav-single.svg');
   background-repeat:   no-repeat;
   background-position: center 12px;
 }
 .header-nav-battery {
-  background-image:    url('/assets/img/icon-nav-battery.svg');
+  background-image:    url('../assets/img/icon-nav-battery.svg');
   background-repeat:   no-repeat;
   background-position: center 12px;
 }
 .header-nav-evchargerdischarger {
-  background-image:    url('/assets/img/icon-nav-evchargerdischarger.svg');
+  background-image:    url('../assets/img/icon-nav-evchargerdischarger.svg');
   background-repeat:   no-repeat;
   background-position: center 14px;
   background-size:     28px;
   padding-top:         48px;
 }
 .header-nav-evcharger {
-  background-image:    url('/assets/img/icon-nav-evcharger.svg');
+  background-image:    url('../assets/img/icon-nav-evcharger.svg');
   background-repeat:   no-repeat;
   background-position: center 14px;
   background-size:     28px;
   padding-top:         48px;
 }
 .header-nav-settings {
-  background-image:    url('/assets/img/icon-nav-settings.svg');
+  background-image:    url('../assets/img/icon-nav-settings.svg');
   background-repeat:   no-repeat;
   background-position: center 15px;
 }
 .header-nav-help {
-  background-image:    url('/assets/img/icon-nav-help.svg');
+  background-image:    url('../assets/img/icon-nav-help.svg');
   background-repeat:   no-repeat;
   background-position: center 15px;
 }
 .header-network-lan {
-  background-image:    url('/assets/img/icon-network-lan.svg');
+  background-image:    url('../assets/img/icon-network-lan.svg');
   background-repeat:   no-repeat;
   background-position: 15px 5px;
 }
 .header-network-vpn {
-  background-image:    url('/assets/img/icon-network-vpn.svg');
+  background-image:    url('../assets/img/icon-network-vpn.svg');
   background-repeat:   no-repeat;
   background-position: 14px center;
 }
 .header-network-cloud {
-  background-image:    url('/assets/img/icon-network-cloud.svg');
+  background-image:    url('../assets/img/icon-network-cloud.svg');
   background-repeat:   no-repeat;
   background-position: 14px center;
 }
