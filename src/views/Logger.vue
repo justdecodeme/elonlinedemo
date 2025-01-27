@@ -75,7 +75,7 @@ export default defineComponent({
 
       if (props.filterLog === 'battery') {
         filteredLog = rawLog.filter((msg: { ip: any; }) => {
-          for (let key in batterySystem.value) {
+          for (const key in batterySystem.value) {
             if (batterySystem.value[key].ip === '') { continue; }
             if (msg.ip === batterySystem.value[key].ip) {
               return true;
@@ -85,7 +85,7 @@ export default defineComponent({
         });
       } else if (props.filterLog === 'evchargerdischarger') {
         filteredLog = rawLog.filter((msg: { ip: any; }) => {
-          for (let key in evChargerDischargerSystem.value) {
+          for (const key in evChargerDischargerSystem.value) {
             if (evChargerDischargerSystem.value[key].ip === '') { continue; }
             if (msg.ip === evChargerDischargerSystem.value[key].ip) {
               return true;
@@ -95,7 +95,7 @@ export default defineComponent({
         });
       } else if (props.filterLog === 'evcharger') {
         filteredLog = rawLog.filter((msg: { ip: any; }) => {
-          for (let key in evChargerSystem.value) {
+          for (const key in evChargerSystem.value) {
             if (evChargerSystem.value[key].ip === '') { continue; }
             if (msg.ip === evChargerSystem.value[key].ip) {
               return true;

@@ -462,13 +462,13 @@ export default defineComponent({
       const epc_edt_List: EpcEdtList = {};
 
       epcList.forEach(epc => {
-        let epcStr = epc.toHex(2).toUpperCase().prefix('0x')
+        const epcStr = epc.toHex(2).toUpperCase().prefix('0x')
 
         let propertyDescription = store.getters.propertyDescription(0x0000, epc, release.value);
         propertyDescription = store.getters.propertyDescription(device.value.eoj.class, epc, release.value) || propertyDescription;
         if (propertyDescription === null) { return; }
 
-        let edt = store.getters.data(device.value.ip, device.value.eoj, epc);
+        const edt = store.getters.data(device.value.ip, device.value.eoj, epc);
         if (edt.length === 0) { return; }
 
         const propertyValue = store.getters.decodedData(epc, edt, propertyDescription);

@@ -107,13 +107,13 @@ const el = (function () {
           newEPC      = 0x00,
           EDT         = [],
           newEDT      = [];
-      for (let EOJClass in conf.app.el.self) {
+      for (const EOJClass in conf.app.el.self) {
         newEOJClass = parseInt(EOJClass, 16);
         res[newEOJClass] = {};
-        for (let EOJID in conf.app.el.self[EOJClass]) {
+        for (const EOJID in conf.app.el.self[EOJClass]) {
           newEOJID = parseInt(EOJID, 16);
           res[newEOJClass][newEOJID] = {};
-          for (let EPC in conf.app.el.self[EOJClass][EOJID]) {
+          for (const EPC in conf.app.el.self[EOJClass][EOJID]) {
             newEPC = parseInt(EPC, 16);
             EDT = conf.app.el.self[EOJClass][EOJID][EPC];
 
