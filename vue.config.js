@@ -2,7 +2,15 @@ process.env.VUE_APP_TITLE = require('./conf/app').app.title;
 
 module.exports = {
   publicPath: '/',
-  // Configure Babel loader options
+  pages: {
+    index: {
+      entry: 'src/main.ts',
+      template: 'public/index.html',
+      filename: 'index.html',
+      title: process.env.VUE_APP_TITLE,
+      chunks: ['chunk-vendors', 'chunk-common', 'index']
+    }
+  },
   chainWebpack: config => {
     // Configure Babel for large components
     config.module
@@ -23,15 +31,6 @@ module.exports = {
       .set('type', 'asset')
       .set('generator', {
         filename: 'assets/img/[name][ext]'
-      });
-
-    // Configure HTML plugin to prevent multiple index.html outputs
-    config.plugin('html')
-      .tap(args => {
-        args[0].filename = 'index.html';
-        args[0].template = 'public/index.html';
-        args[0].inject = true;
-        return args;
       });
 
     // Ensure assets in public folder are copied
