@@ -23,5 +23,20 @@ module.exports = {
       .set('generator', {
         filename: 'assets/img/[name][ext]'
       });
+
+    // Configure sass-loader to use modern API
+    config.module
+      .rule('scss')
+      .oneOf('vue')
+      .use('sass-loader')
+      .tap(options => ({
+        ...options,
+        api: 'modern',
+        sourceMap: false,
+        sassOptions: {
+          outputStyle: 'compressed'
+        },
+        implementation: require('sass')
+      }));
   }
 }
