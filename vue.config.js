@@ -11,6 +11,27 @@ module.exports = {
       chunks: ['chunk-vendors', 'chunk-common', 'index']
     }
   },
+  configureWebpack: {
+    optimization: {
+      splitChunks: {
+        cacheGroups: {
+          defaultVendors: {
+            name: 'chunk-vendors',
+            test: /[\\/]node_modules[\\/]/,
+            priority: -10,
+            chunks: 'initial'
+          },
+          common: {
+            name: 'chunk-common',
+            minChunks: 2,
+            priority: -20,
+            chunks: 'initial',
+            reuseExistingChunk: true
+          }
+        }
+      }
+    }
+  },
   chainWebpack: config => {
     // Configure Babel for large components
     config.module
@@ -33,7 +54,7 @@ module.exports = {
         filename: 'assets/img/[name][ext]'
       });
 
-    // Ensure assets in public folder are copied
+    // Configure copy plugin to exclude index.html
     config.plugin('copy')
       .tap(args => {
         args[0].patterns = [
