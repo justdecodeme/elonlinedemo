@@ -86,6 +86,7 @@
     "svgo": "^2.8.0",
     "uuid": "^7.0.3",
     "consolidate": "^1.0.1",
-    "superagent": "^9.0.0"
+    "superagent": "^9.0.0",
+    "rimraf": "^4.0.0"
   }
 }
