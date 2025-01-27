@@ -25,6 +25,15 @@ module.exports = {
         filename: 'assets/img/[name][ext]'
       });
 
+    // Configure HTML plugin to prevent multiple index.html outputs
+    config.plugin('html')
+      .tap(args => {
+        args[0].filename = 'index.html';
+        args[0].template = 'public/index.html';
+        args[0].inject = true;
+        return args;
+      });
+
     // Ensure assets in public folder are copied
     config.plugin('copy')
       .tap(args => {
@@ -35,7 +44,7 @@ module.exports = {
             toType: 'dir',
             noErrorOnMissing: true,
             globOptions: {
-              ignore: ['.DS_Store']
+              ignore: ['.DS_Store', 'index.html']
             }
           }
         ];
